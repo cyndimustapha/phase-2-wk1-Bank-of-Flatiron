@@ -48,8 +48,9 @@ function TransactionForm({ onAddTransaction }) {
         onChange={(e) => setAmount(e.target.value)}
         style={{ padding: '10px', borderRadius: '5px', border: '1px solid lightgray', marginRight: '10px' }}
       />
+      <br></br>
       <button type="submit"
-      style={{ padding: '10px', borderRadius: '5px', backgroundColor: 'lightgrey', color: 'black', border: 'none', cursor: 'pointer' }}
+      style={{ padding: '10px', borderRadius: '5px', backgroundColor: 'lightgrey',marginLeft: '50%', color: 'black', border: 'none', cursor: 'pointer' }}
       >Add Transaction</button>
     </form>
   );

@@ -15,7 +15,7 @@ function SearchBar({ onSearch }) {
 
   return (
     <div>
-      <input style={{marginRight: '20px', padding: '10px', borderRadius: '5px', width: '300px'}}
+      <input style={{marginRight: '20px', marginBottom: '10px', padding: '10px', borderRadius: '5px', width: '90%'}}
         type="text"
         value={searchTerm}
         onChange={handleChange}
