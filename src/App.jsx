@@ -1,3 +1,4 @@
+//App.jsx
 import React, { useState } from "react";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
@@ -24,7 +25,7 @@ function App() {
       </div>
       <SearchBar onSearch={handleSearch}/>
       <TransactionForm onAddTransaction={handleAddTransaction}/>
-      <TransactionTable />
+      <TransactionTable transactions={transactions}/>
     </div>
   );
 }
