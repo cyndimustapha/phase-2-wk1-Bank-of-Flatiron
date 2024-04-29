@@ -7,12 +7,12 @@
 ## Description
 This React application allows users to manage their bank transactions.
 Users can do the following:
-  1.See a table of the transactions.
-  2.Fill out and submit the form to add a new transaction.
-  3.Filter transactions by typing into the search bar. 
+  1. See a table of the transactions.
+  2. Fill out and submit the form to add a new transaction.
+  3. Filter transactions by typing into the search bar. 
 
 ## Installation
-You use git clone to be able to donload the documnets in the GitHub
+You use git clone to be able to download the documents in the GitHub
 
 ## Installation Requirements
 Git
@@ -28,6 +28,7 @@ git clone https://github.com/cyndimustapha/phase-2-wk1-Bank-of-Flatiron.git
 ## Technologies used
 React
 Javascript
+CSS
 
 ## Support and contact details
 https://github.com/cyndimustapha
