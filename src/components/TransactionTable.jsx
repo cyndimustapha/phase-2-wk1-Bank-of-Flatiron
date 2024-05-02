@@ -31,7 +31,7 @@ const TransactionTable = ({ transactions, searchTerm }) => {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((transaction, index) => (
+          {filteredTransactions.map((transaction, index) => (
             <tr key={index} style={{ borderBottom: '1px solid lightgray' }}>
               <td style={{ padding: '10px', borderRight: '1px solid lightgray', textAlign:'center' }}>{transaction.date}</td>
               <td style={{ padding: '10px', borderRight: '1px solid lightgray', textAlign:'center' }}>{transaction.description}</td>
