@@ -21,9 +21,9 @@ function App() {
   // Filter transactions based on search term
   const filteredTransactions = transactions.filter(transaction => {
     const lowerCasedSearchTerm = searchTerm.toLowerCase();
-    const { title, description, category, amount } = transaction;
+    const { date, description, category, amount } = transaction;
     return (
-      title.toLowerCase().includes(lowerCasedSearchTerm) ||
+      date.toString().toLowerCase().includes(lowerCasedSearchTerm) ||
       description.toLowerCase().includes(lowerCasedSearchTerm) ||
       category.toLowerCase().includes(lowerCasedSearchTerm) ||
       amount.toString().toLowerCase().includes(lowerCasedSearchTerm)
