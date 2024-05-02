@@ -1,4 +1,3 @@
-//App.jsx
 import React, { useState } from "react";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
@@ -11,19 +10,19 @@ function App() {
   const [transactions, setTransactions] = useState([]);
 
   function handleSearch(term) {
-    setSearchTerm(term);
+    setSearchTerm(term); // Update the searchTerm state
   }
   
   function handleAddTransaction(newTransaction) {
     setTransactions([...transactions, newTransaction]);
   }
 
-  // Filter transactions based on search term
+  // Filter transactions based on the search term
   const filteredTransactions = transactions.filter(transaction => {
     const lowerCasedSearchTerm = searchTerm.toLowerCase();
-    const { date, description, category, amount } = transaction;
+    const { title, description, category, amount } = transaction;
     return (
-      date.toString().toLowerCase().includes(lowerCasedSearchTerm) ||
+      title.toLowerCase().includes(lowerCasedSearchTerm) ||
       description.toLowerCase().includes(lowerCasedSearchTerm) ||
       category.toLowerCase().includes(lowerCasedSearchTerm) ||
       amount.toString().toLowerCase().includes(lowerCasedSearchTerm)
@@ -32,12 +31,10 @@ function App() {
 
   return (
     <div>
-      <div>
-        <Header bankName={bankName} />
-      </div>
-      <SearchBar onSearch={handleSearch}/>
-      <TransactionForm onAddTransaction={handleAddTransaction}/>
-      <TransactionTable transactions={filteredTransactions}/>
+      <Header bankName={bankName} />
+      <SearchBar onSearch={handleSearch} />
+      <TransactionForm onAddTransaction={handleAddTransaction} />
+      <TransactionTable transactions={filteredTransactions} />
     </div>
   );
 }
