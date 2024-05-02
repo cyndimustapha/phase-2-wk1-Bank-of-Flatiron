@@ -6,13 +6,13 @@ const TransactionTable = ({ transactions, searchTerm }) => {
   const filteredTransactions = transactions.filter((transaction) => {
     // Convert search term and transaction data to lowercase for case-insensitive comparison
     const searchTermLowerCase = searchTerm.toLowerCase();
-    const title = transaction.title.toLowerCase();
+    const date= transaction.date.toString().toLowerCase();
     const description = transaction.description.toLowerCase();
     const category = transaction.category.toLowerCase();
     const amount = transaction.amount.toString().toLowerCase();
     
  return (
-      title.includes(searchTermLowerCase) ||
+      date.includes(searchTermLowerCase) ||
       description.includes(searchTermLowerCase) ||
       category.includes(searchTermLowerCase) ||
       amount.includes(searchTermLowerCase)
