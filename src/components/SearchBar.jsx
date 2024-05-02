@@ -7,7 +7,6 @@ function SearchBar({ onSearch }) {
 
   function handleChange(event) {
     setSearchTerm(event.target.value);
-    onSearch(event.target.value);
   }
 
   const handleSearch = () => {
