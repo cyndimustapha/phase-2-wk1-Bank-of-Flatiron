@@ -18,6 +18,18 @@ function App() {
     setTransactions([...transactions, newTransaction]);
   }
 
+  // Filter transactions based on search term
+  const filteredTransactions = transactions.filter(transaction => {
+    const lowerCasedSearchTerm = searchTerm.toLowerCase();
+    const { title, description, category, amount } = transaction;
+    return (
+      title.toLowerCase().includes(lowerCasedSearchTerm) ||
+      description.toLowerCase().includes(lowerCasedSearchTerm) ||
+      category.toLowerCase().includes(lowerCasedSearchTerm) ||
+      amount.toString().toLowerCase().includes(lowerCasedSearchTerm)
+    );
+  });
+
   return (
     <div>
       <div>
@@ -25,7 +37,7 @@ function App() {
       </div>
       <SearchBar onSearch={handleSearch}/>
       <TransactionForm onAddTransaction={handleAddTransaction}/>
-      <TransactionTable transactions={transactions}/>
+      <TransactionTable transactions={filteredTransactions}/>
     </div>
   );
 }
