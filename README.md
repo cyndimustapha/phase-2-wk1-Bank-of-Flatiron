@@ -24,7 +24,7 @@ git clone https://github.com/cyndimustapha/phase-2-wk1-Bank-of-Flatiron.git
 ```
 
 # Live Link
-https://cyndimustapha.github.io/phase-2-wk1-Bank-of-Flatiron/
+https://phase-2-wk1-bank-of-flatiron.vercel.app/
 
 ## Technologies used
 React
