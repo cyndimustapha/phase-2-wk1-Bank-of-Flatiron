@@ -1,24 +1,7 @@
 // TransactionTable.jsx
 import React from "react";
 
-const TransactionTable = ({ transactions, searchTerm }) => {
-  // Filter transactions based on search term
-  const filteredTransactions = transactions.filter((transaction) => {
-    // Convert search term and transaction data to lowercase for case-insensitive comparison
-    const searchTermLowerCase = searchTerm.toLowerCase();
-    const date= transaction.date.toString().toLowerCase();
-    const description = transaction.description.toLowerCase();
-    const category = transaction.category.toLowerCase();
-    const amount = transaction.amount.toString().toLowerCase();
-    
- return (
-      date.includes(searchTermLowerCase) ||
-      description.includes(searchTermLowerCase) ||
-      category.includes(searchTermLowerCase) ||
-      amount.includes(searchTermLowerCase)
-    );
-  });
-  
+const TransactionTable = ({ transactions }) => {
   return (
     <div style={{ marginBottom: '20px' }}>
       <table style={{ borderCollapse: 'collapse', width: '100%' }}>
@@ -31,7 +14,7 @@ const TransactionTable = ({ transactions, searchTerm }) => {
           </tr>
         </thead>
         <tbody>
-          {filteredTransactions.map((transaction, index) => (
+          {transactions.map((transaction, index) => (
             <tr key={index} style={{ borderBottom: '1px solid lightgray' }}>
               <td style={{ padding: '10px', borderRight: '1px solid lightgray', textAlign:'center' }}>{transaction.date}</td>
               <td style={{ padding: '10px', borderRight: '1px solid lightgray', textAlign:'center' }}>{transaction.description}</td>
